@@ -20,25 +20,13 @@ class Neuron(object):
     """
     __metaclass__ = abc.ABCMeta
 
-    def __init__(self, learn_rate=0.01, epochs=10):
+    def __init__(self, learn_rate=0.01, epochs=50):
         self.learn_rate = learn_rate
         self.epochs = epochs
 
     @abc.abstractmethod
     def fit(self, X, y):
-        """Fit training data.
-
-        Parameters
-        ----------
-        X : {array-like}, shape = [sample_count, feature_count]
-            Training vectors, defining the number of samples and features.
-        y : array-like, shape = [sample_count]
-            Target values.
-
-        Returns
-        -------
-        self : object
-        """
+        """Fit training data"""
 
     def net_input(self, X):
         """Calculate new input"""
